@@ -5,3 +5,5 @@
 src/aiogram_s3.egg-info/*
 
 .env
+
+run_test.sh
