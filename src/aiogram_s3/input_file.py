@@ -1,4 +1,5 @@
 from collections.abc import AsyncGenerator
+from contextlib import asynccontextmanager
 from typing import TYPE_CHECKING
 
 from aioboto3.session import Session
@@ -49,6 +50,7 @@ class S3InputFile(InputFile):
         )
         raise ValueError(message)
 
+    @asynccontextmanager
     async def _get_client(self) -> AsyncGenerator["S3Client", None]:
         if self.s3_client is not None:
             yield self.s3_client
@@ -68,11 +70,10 @@ class S3InputFile(InputFile):
                     yield s3_client
 
     async def read(self, bot: Bot) -> AsyncGenerator[bytes, None]:  # noqa: ARG002
-        client = await anext(self._get_client())
-        async with client as s3:
+        async with self._get_client() as s3:
             obj = await s3.get_object(
                 Bucket=self.s3_bucket,
                 Key=self.s3_key,
             )
-            while file_data := await obj["Body"].read(self.chunk_size):
-                yield file_data
+            while data := await obj["Body"].read(self.chunk_size):
+                yield data
