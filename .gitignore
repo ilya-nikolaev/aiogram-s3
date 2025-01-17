@@ -3,3 +3,5 @@
 *.pyc
 
 src/aiogram_s3.egg-info/*
+
+.env
