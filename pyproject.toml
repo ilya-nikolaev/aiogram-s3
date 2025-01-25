@@ -17,8 +17,8 @@ requires-python = ">=3.10"
 dependencies = [
     "aiogram",
     "aioboto3",
-    "types-aioboto3~=13.4.0",
-    "types-aiobotocore-s3~=2.16.1.post1",
+    "types-aioboto3",
+    "types-aiobotocore-s3",
 ]
 
 authors = [
@@ -27,9 +27,9 @@ authors = [
 
 [project.optional-dependencies]
 dev = [
-    "ruff~=0.8.4",
+    "ruff~=0.9.3",
     "mypy~=1.14.1",
-    "pre-commit~=4.0.1",
+    "pre-commit~=4.1.0",
     
 ]
 di = [
