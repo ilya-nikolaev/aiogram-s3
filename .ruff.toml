@@ -1,0 +1,15 @@
+include = [
+    "src/**/*.py",
+    "examples/**/*.py",
+]
+exclude = [
+    ".venv",
+]
+
+line-length = 79
+
+select = ["ALL"]
+ignore = [
+    "D1",
+    "TC0",
+]
