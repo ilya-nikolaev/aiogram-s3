@@ -10,11 +10,6 @@ A lightweight library for seamless integration of Amazon S3 with aiogram. Simpli
 + Lightweight and easy to use
 
 
-## Tips for use
-
-I recommend **copying the necessary parts of the source code directly into your project** instead of installing the library in the standard way. This approach provides greater flexibility and avoids unnecessary dependencies. Enjoy using it!
-
-
 ## Installation
 
 You can install the library directly from the repository:
