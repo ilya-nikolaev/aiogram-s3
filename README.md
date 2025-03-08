@@ -20,8 +20,8 @@ python -m pip install git+https://github.com/ilya-nikolaev/aiogram-s3.git
 ### Optional dependencies
 
 Specify optional dependencies to tailor the installation to your needs:
-+ `dev` - Includes development tools (e. g., `ruff`, `mypy`, etc.)
-+ `types` - Adds type annotations for better static typing
++ `dev` - Includes development tools (`ruff`, `mypy` and `pre-commit`)
++ `di` - Includes `dishka`
 
 #### Example with Optional Dependencies:
 
