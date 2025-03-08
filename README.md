@@ -75,10 +75,3 @@ The example script (examples/send_s3_doc.py) demonstrates how to use the library
 1. Interact with your bot
 
     Send the `/start` command to begin interaction.
-
-
-## FAQ
-
-1. Why don't we add the ability to provide client to the 'S3InputFile'?
-
-    Because the client is a one-time use, which is not obvious and may cause problems for users. And also, it doesn't make much sense.
